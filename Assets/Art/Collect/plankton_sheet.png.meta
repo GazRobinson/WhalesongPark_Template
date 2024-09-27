@@ -1,0 +1,714 @@
+fileFormatVersion: 2
+guid: 486dc1dcea7c4e64cae9ad50ef9ffefc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7150734582549251464
+    second: plankton_sheet_0
+  - first:
+      213: -181446833823069686
+    second: plankton_sheet_1
+  - first:
+      213: 1664467579521611427
+    second: plankton_sheet_2
+  - first:
+      213: -4180408064857629968
+    second: plankton_sheet_3
+  - first:
+      213: -1607767774875576774
+    second: plankton_sheet_4
+  - first:
+      213: -8221264911538451175
+    second: plankton_sheet_5
+  - first:
+      213: -9100405969362947885
+    second: plankton_sheet_6
+  - first:
+      213: -6200289915372543156
+    second: plankton_sheet_7
+  - first:
+      213: -1785653993420141136
+    second: plankton_sheet_8
+  - first:
+      213: 6858375560264744624
+    second: plankton_sheet_9
+  - first:
+      213: -2674692634137751824
+    second: plankton_sheet_10
+  - first:
+      213: 4479989086849778661
+    second: plankton_sheet_11
+  - first:
+      213: -4991026637831865182
+    second: plankton_sheet_12
+  - first:
+      213: -6960269966668786512
+    second: plankton_sheet_13
+  - first:
+      213: -4120267909593110356
+    second: plankton_sheet_14
+  - first:
+      213: -4495196865507625752
+    second: plankton_sheet_15
+  - first:
+      213: 7921065086912830284
+    second: plankton_sheet_16
+  - first:
+      213: 7361987574119540093
+    second: plankton_sheet_17
+  - first:
+      213: -7077163079200714610
+    second: plankton_sheet_18
+  - first:
+      213: -154698149728287397
+    second: plankton_sheet_19
+  - first:
+      213: -4130338923909330592
+    second: plankton_sheet_20
+  - first:
+      213: 7035897530620017075
+    second: plankton_sheet_21
+  - first:
+      213: 8797150836181487973
+    second: plankton_sheet_22
+  - first:
+      213: 7301781747772996906
+    second: plankton_sheet_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: plankton_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87afc0c88cc73cc90800000000000000
+      internalID: -7150734582549251464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a4b54e01f5b7df0800000000000000
+      internalID: -181446833823069686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a63a81e170691710800000000000000
+      internalID: 1664467579521611427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa9bf583053cf5c0800000000000000
+      internalID: -4180408064857629968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3698312abf00b9e0800000000000000
+      internalID: -1607767774875576774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d0e5ffe1338ed80800000000000000
+      internalID: -8221264911538451175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0f644acfcd4b180800000000000000
+      internalID: -9100405969362947885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4368c92c2524f9a0800000000000000
+      internalID: -6200289915372543156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd4f6e57251837e0800000000000000
+      internalID: -1785653993420141136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0befccd1c38dd2f50800000000000000
+      internalID: 6858375560264744624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe8dda683591ead0800000000000000
+      internalID: -2674692634137751824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3ce47a65e1c2e30800000000000000
+      internalID: 4479989086849778661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acf48b67bf4cbab0800000000000000
+      internalID: -4991026637831865182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b413e7a757286f90800000000000000
+      internalID: -6960269966668786512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8e2459a2ed1d6c0800000000000000
+      internalID: -4120267909593110356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4f7f3744add91c0800000000000000
+      internalID: -4495196865507625752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b103c9ab64ded60800000000000000
+      internalID: 7921065086912830284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d752c3471b80b2660800000000000000
+      internalID: 7361987574119540093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e805bb60dadd8cd90800000000000000
+      internalID: -7077163079200714610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55090a3ad66addf0800000000000000
+      internalID: -154698149728287397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 6
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0694a66d1a61ea6c0800000000000000
+      internalID: -4130338923909330592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b977acb68784a160800000000000000
+      internalID: 7035897530620017075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561d0228312c51a70800000000000000
+      internalID: 8797150836181487973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plankton_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2db07720d3255560800000000000000
+      internalID: 7301781747772996906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      plankton_sheet_0: -7150734582549251464
+      plankton_sheet_1: -181446833823069686
+      plankton_sheet_10: -2674692634137751824
+      plankton_sheet_11: 4479989086849778661
+      plankton_sheet_12: -4991026637831865182
+      plankton_sheet_13: -6960269966668786512
+      plankton_sheet_14: -4120267909593110356
+      plankton_sheet_15: -4495196865507625752
+      plankton_sheet_16: 7921065086912830284
+      plankton_sheet_17: 7361987574119540093
+      plankton_sheet_18: -7077163079200714610
+      plankton_sheet_19: -154698149728287397
+      plankton_sheet_2: 1664467579521611427
+      plankton_sheet_20: -4130338923909330592
+      plankton_sheet_21: 7035897530620017075
+      plankton_sheet_22: 8797150836181487973
+      plankton_sheet_23: 7301781747772996906
+      plankton_sheet_3: -4180408064857629968
+      plankton_sheet_4: -1607767774875576774
+      plankton_sheet_5: -8221264911538451175
+      plankton_sheet_6: -9100405969362947885
+      plankton_sheet_7: -6200289915372543156
+      plankton_sheet_8: -1785653993420141136
+      plankton_sheet_9: 6858375560264744624
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

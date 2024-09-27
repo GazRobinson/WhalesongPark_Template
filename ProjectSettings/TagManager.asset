@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fish
+  - Whale
+  - SpawnedItem
+  - Plankton
+  - Plankton0
+  - Plankton1
+  - Plankton2
+  - Plankton3
+  - Eel
+  - Shark
+  - WaterTrigger
+  - Cleanup
+  - MissedTrigger
+  - MinigameManager
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Boid
+  - Plankton
+  - Whales
+  - Obstacle
+  - Shark
+  - 
+  - PipeGroup1
+  - PipeGroup2
+  - PipeGroup3
+  - PipeGroup4
+  - Whale Body
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2113055319
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player1Mask
+    uniqueID: 2050542627
+    locked: 0
+  - name: Player2Mask
+    uniqueID: 2902800471
+    locked: 0
+  - name: Player3Mask
+    uniqueID: 2426062845
+    locked: 0
+  - name: Player4Mask
+    uniqueID: 3913897873
+    locked: 0
+  - name: Foreground
+    uniqueID: 2678582219
+    locked: 0
+  - name: UI
+    uniqueID: 3583571893
+    locked: 0
+  - name: Transitions
+    uniqueID: 1246213681
+    locked: 0

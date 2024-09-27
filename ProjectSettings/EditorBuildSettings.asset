@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DevScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/InputTester.unity
+    guid: 99631625e3df58440b93955fcd1b7043
+  - enabled: 0
+    path: Assets/Scenes/AudioTester 1.unity
+    guid: 1ee7fa79c842a894cbe3608f155e0dad
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 79e85c6b9f950ff4a9de0da264a0da06, type: 2}
+  m_UseUCBPForAssetBundles: 0

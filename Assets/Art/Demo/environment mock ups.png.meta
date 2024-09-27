@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: c2d15eecb0f0b0a4f9529eb42356d4d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8992128445899202238
+    second: environment mock ups_0
+  - first:
+      213: 5148531761573499550
+    second: environment mock ups_1
+  - first:
+      213: 7767933585387726927
+    second: environment mock ups_2
+  - first:
+      213: 2461714822588373451
+    second: environment mock ups_3
+  - first:
+      213: 7515621243674915147
+    second: environment mock ups_4
+  - first:
+      213: -7091001335811843382
+    second: environment mock ups_5
+  - first:
+      213: 296477921846420228
+    second: environment mock ups_6
+  - first:
+      213: 7095993867320978608
+    second: environment mock ups_7
+  - first:
+      213: 648286493927707586
+    second: environment mock ups_8
+  - first:
+      213: -2571856497520227626
+    second: environment mock ups_9
+  - first:
+      213: -6023802739189299645
+    second: environment mock ups_10
+  - first:
+      213: 8346579128035738200
+    second: environment mock ups_11
+  - first:
+      213: 4161539435197191191
+    second: environment mock ups_12
+  - first:
+      213: 5186956237417087788
+    second: environment mock ups_13
+  - first:
+      213: 1122862105045308242
+    second: environment mock ups_14
+  - first:
+      213: 3187438399980508999
+    second: environment mock ups_15
+  - first:
+      213: -8887411549012365203
+    second: environment mock ups_16
+  - first:
+      213: -3731466426029376550
+    second: environment mock ups_17
+  - first:
+      213: -4332668633432825576
+    second: environment mock ups_18
+  - first:
+      213: 6111182921156588804
+    second: environment mock ups_19
+  - first:
+      213: -3143268476669498900
+    second: environment mock ups_20
+  - first:
+      213: -8858651498604383728
+    second: environment mock ups_21
+  - first:
+      213: -8831294317837889127
+    second: environment mock ups_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: environment mock ups_0
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1796
+        width: 805
+        height: 455
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebed180ed257acc70800000000000000
+      internalID: 8992128445899202238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_1
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2154
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92976beb52437740800000000000000
+      internalID: 5148531761573499550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_2
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 1594
+        width: 1316
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48acdb807e3dcb60800000000000000
+      internalID: 7767933585387726927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_3
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1593
+        width: 680
+        height: 385
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc991b2a694c92220800000000000000
+      internalID: 2461714822588373451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_4
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 1890
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b417f9f93b9dc4860800000000000000
+      internalID: 7515621243674915147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1239
+        width: 1036
+        height: 588
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca5d15dad3b79d90800000000000000
+      internalID: -7091001335811843382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_6
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1491
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403e66f591d4d1400800000000000000
+      internalID: 296477921846420228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_7
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 789
+        width: 404
+        height: 814
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 9, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc640e73d80a7260800000000000000
+      internalID: 7095993867320978608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_8
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 808
+        width: 673
+        height: 626
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c39e37a12d2ff800800000000000000
+      internalID: 648286493927707586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_9
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 957
+        width: 603
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dac60c442eee4cd0800000000000000
+      internalID: -2571856497520227626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_10
+      rect:
+        serializedVersion: 2
+        x: 3225
+        y: 1186
+        width: 251
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346c89df257276ca0800000000000000
+      internalID: -6023802739189299645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_11
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 1042
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8528240be7105d370800000000000000
+      internalID: 8346579128035738200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_12
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 748
+        width: 130
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71455b94112c0c930800000000000000
+      internalID: 4161539435197191191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_13
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 989
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c230ebc5735cbf740800000000000000
+      internalID: 5186956237417087788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_14
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 941
+        width: 22
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25319f6a225359f00800000000000000
+      internalID: 1122862105045308242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_15
+      rect:
+        serializedVersion: 2
+        x: 3052
+        y: 986
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7471746465e0c3c20800000000000000
+      internalID: 3187438399980508999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_16
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 976
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60f960a84299a480800000000000000
+      internalID: -8887411549012365203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 32
+        width: 697
+        height: 764
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbf8314e0b273cc0800000000000000
+      internalID: -3731466426029376550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_18
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 633
+        width: 383
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81162c655d44fd3c0800000000000000
+      internalID: -4332668633432825576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_19
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 758
+        width: 133
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405f8f40d784fc450800000000000000
+      internalID: 6111182921156588804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_20
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 20
+        width: 494
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce96e6669fdd064d0800000000000000
+      internalID: -3143268476669498900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_21
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 57
+        width: 718
+        height: 626
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01234bca56fbf0580800000000000000
+      internalID: -8858651498604383728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: environment mock ups_22
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 141
+        width: 843
+        height: 533
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991d85eab90f07580800000000000000
+      internalID: -8831294317837889127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      environment mock ups_0: 8992128445899202238
+      environment mock ups_1: 5148531761573499550
+      environment mock ups_10: -6023802739189299645
+      environment mock ups_11: 8346579128035738200
+      environment mock ups_12: 4161539435197191191
+      environment mock ups_13: 5186956237417087788
+      environment mock ups_14: 1122862105045308242
+      environment mock ups_15: 3187438399980508999
+      environment mock ups_16: -8887411549012365203
+      environment mock ups_17: -3731466426029376550
+      environment mock ups_18: -4332668633432825576
+      environment mock ups_19: 6111182921156588804
+      environment mock ups_2: 7767933585387726927
+      environment mock ups_20: -3143268476669498900
+      environment mock ups_21: -8858651498604383728
+      environment mock ups_22: -8831294317837889127
+      environment mock ups_3: 2461714822588373451
+      environment mock ups_4: 7515621243674915147
+      environment mock ups_5: -7091001335811843382
+      environment mock ups_6: 296477921846420228
+      environment mock ups_7: 7095993867320978608
+      environment mock ups_8: 648286493927707586
+      environment mock ups_9: -2571856497520227626
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

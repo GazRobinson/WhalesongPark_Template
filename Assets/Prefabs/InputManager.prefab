@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7437723228288075871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5891552139792573628}
+  - component: {fileID: 8346965660300035486}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5891552139792573628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437723228288075871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8346965660300035486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437723228288075871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0972c2a6beecf464a8def2b2b4c0c5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput:
+  - Keyboard:
+      A: 122
+      B: 120
+      Up: 119
+      Down: 115
+      Left: 97
+      Right: 100
+    Controller:
+      A: Fire1
+      B: Fire2
+      Vertical: Vertical
+      Horizontal: Horizontal
+    COM:
+      A: 0
+      B: 0
+      Up: 0
+      Down: 0
+      Left: 0
+      Right: 0
+  - Keyboard:
+      A: 118
+      B: 98
+      Up: 116
+      Down: 103
+      Left: 102
+      Right: 104
+    Controller:
+      A: Fire1
+      B: Fire2
+      Vertical: Vertical
+      Horizontal: Horizontal
+    COM:
+      A: 0
+      B: 0
+      Up: 0
+      Down: 0
+      Left: 0
+      Right: 0
+  - Keyboard:
+      A: 109
+      B: 60
+      Up: 105
+      Down: 107
+      Left: 106
+      Right: 108
+    Controller:
+      A: Fire1
+      B: Fire2
+      Vertical: Vertical
+      Horizontal: Horizontal
+    COM:
+      A: 0
+      B: 0
+      Up: 0
+      Down: 0
+      Left: 0
+      Right: 0
+  - Keyboard:
+      A: 256
+      B: 266
+      Up: 273
+      Down: 274
+      Left: 276
+      Right: 275
+    Controller:
+      A: Fire1
+      B: Fire2
+      Vertical: Vertical
+      Horizontal: Horizontal
+    COM:
+      A: 0
+      B: 0
+      Up: 0
+      Down: 0
+      Left: 0
+      Right: 0
