@@ -49,7 +49,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   playerAcceleration: 0
+  playerSlideSpeed: 5
   ObstacleSpawnDistance: 60
+  landDistanceOffset: 50
   prefab1x1: {fileID: 5207370068283573462, guid: c3f9cbfda197a9f40b3990653cdbadc7, type: 3}
   prefabLand: {fileID: 5207370068283573462, guid: 640747ab68a8ba04291bf71c6656a6be, type: 3}
   spawnRate: 0.5
