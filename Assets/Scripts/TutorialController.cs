@@ -62,6 +62,7 @@ public class TutorialController : MonoBehaviour
 
     protected virtual void DoTutorial()
     {
+        //hard coded 1.0f to skiup tutorial, replace wqith TutorialDuration when yo done
         StartCoroutine(DelayForTime(TutorialDuration, () =>
         {
             CompleteTutorial();
