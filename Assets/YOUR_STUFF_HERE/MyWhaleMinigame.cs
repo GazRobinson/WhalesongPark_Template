@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MyWhaleMinigame : MinigameBase
 {
+    [SerializeField] private PlayerRig[] players;
     /// <summary>
     /// This function is called at the end of the game so that it knows what to display on the score screen.
     /// You give it information about what each players score was, how much time they earned individually, and also how much time they've earned together
@@ -35,7 +36,7 @@ public class MyWhaleMinigame : MinigameBase
     /// <param name="direction">Which direction(s) are they pressing</param>
     public override void OnDirectionalInput(int playerIndex, Vector2 direction)
     {
-
+        players[playerIndex].HandleInput(PlayerRig.inputTypes.Directional, direction);
     }
     /// <summary>
     /// What should happen when the player presses the left hand button?
@@ -43,6 +44,8 @@ public class MyWhaleMinigame : MinigameBase
     /// <param name="playerIndex">Which player (0-3) pressed the button</param>
     public override void OnPrimaryFire(int playerIndex)
     {
+        Debug.Log("From player " + playerIndex);
+        players[playerIndex].HandleInput(PlayerRig.inputTypes.primaryFire);
     }
 
     /// <summary>
@@ -51,7 +54,8 @@ public class MyWhaleMinigame : MinigameBase
     /// <param name="playerIndex">Which player (0-3) pressed the button</param>
     public override void OnSecondaryFire(int playerIndex)
     {
-       
+        Debug.Log("From player " + playerIndex);
+        players[playerIndex].HandleInput(PlayerRig.inputTypes.secondaryFire);
     }
 
     public override void TimeUp()
