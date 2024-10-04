@@ -36,7 +36,11 @@ public class MyWhaleMinigame : MinigameBase
     /// <param name="direction">Which direction(s) are they pressing</param>
     public override void OnDirectionalInput(int playerIndex, Vector2 direction)
     {
-        players[playerIndex].HandleInput(PlayerRig.inputTypes.Directional, direction);
+        if (direction.magnitude != 0)
+        {
+            ActivatePlayer(playerIndex);
+            players[playerIndex].HandleInput(PlayerRig.inputTypes.Directional, direction);
+        }
     }
     /// <summary>
     /// What should happen when the player presses the left hand button?
@@ -44,7 +48,7 @@ public class MyWhaleMinigame : MinigameBase
     /// <param name="playerIndex">Which player (0-3) pressed the button</param>
     public override void OnPrimaryFire(int playerIndex)
     {
-        Debug.Log("From player " + playerIndex);
+        ActivatePlayer(playerIndex);
         players[playerIndex].HandleInput(PlayerRig.inputTypes.primaryFire);
     }
 
@@ -54,7 +58,7 @@ public class MyWhaleMinigame : MinigameBase
     /// <param name="playerIndex">Which player (0-3) pressed the button</param>
     public override void OnSecondaryFire(int playerIndex)
     {
-        Debug.Log("From player " + playerIndex);
+        ActivatePlayer(playerIndex);
         players[playerIndex].HandleInput(PlayerRig.inputTypes.secondaryFire);
     }
 
@@ -69,5 +73,12 @@ public class MyWhaleMinigame : MinigameBase
         //Is there any cleanup you have to do when the game gets totally reset?
         //This might just be empty!
 
+    }
+
+    private void ActivatePlayer(int playerIndex)
+    {
+        Debug.Log("Activating player " + playerIndex);
+        if (players[playerIndex].gameObject.activeSelf == false) 
+               players[playerIndex].gameObject.SetActive(true);
     }
 }
