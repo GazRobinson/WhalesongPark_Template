@@ -6,8 +6,7 @@ public class BikeGame : MinigameBase
 {
    
     [SerializeField] private PlayerBike[] players;
-
-
+    [SerializeField] BoxCollider2D finishLineCollder;
 
 
     /// <summary>
@@ -73,4 +72,10 @@ public class BikeGame : MinigameBase
         //This might just be empty!
 
     }
+
+    public void OnFinishReached()
+    {
+        OnGameComplete(true);
+    }
+
 }
