@@ -8,6 +8,9 @@ using static UnityEngine.Networking.UnityWebRequest;
 
 public class GameManager : MonoBehaviour
 {
+    //Please let us add this here for the Discovery Game.
+    public bool AlwaysPassInputToGame = false;
+
     //TODO: Move this into its own state class
     public enum GameState { IDLE, INTRO, MINIGAME, ENDSTATE, NULL };
     private GameState gameState = GameState.IDLE;
@@ -349,10 +352,10 @@ public class GameManager : MonoBehaviour
     {
         if (!inputBlocked[playerIndex])
         {
-            //Debug.Log("Primary Fire Index: " + playerIndex);
+            Debug.Log("THEIRS: Primary Fire Index: " + playerIndex);
             playerManager.players[playerIndex].OnPrimaryFire();
             // If player is active and a minigame is currently playing, trigger the primary fire event for the current minigame
-            if (gameState == GameState.MINIGAME && playerManager.GetPlayerState(playerIndex) == Player.PlayerState.ACTIVE)
+            if ((gameState == GameState.MINIGAME && playerManager.GetPlayerState(playerIndex) == Player.PlayerState.ACTIVE) || AlwaysPassInputToGame)
             {
                 minigameManager.PassButtonInput(playerIndex, 0);
             }
@@ -372,7 +375,7 @@ public class GameManager : MonoBehaviour
             //Debug.Log("Secondary Fire Index: " + playerIndex);
             playerManager.players[playerIndex].OnSecondaryFire();
             // If player is active and a minigame is currently playing, trigger the secondary fire event for the current minigame
-            if (gameState == GameState.MINIGAME && playerManager.GetPlayerState(playerIndex) == Player.PlayerState.ACTIVE)
+            if ((gameState == GameState.MINIGAME && playerManager.GetPlayerState(playerIndex) == Player.PlayerState.ACTIVE) || AlwaysPassInputToGame)
             {
                 minigameManager.PassButtonInput(playerIndex, 1);
             }

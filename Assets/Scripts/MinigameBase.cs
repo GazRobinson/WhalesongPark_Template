@@ -92,6 +92,11 @@ public abstract class MinigameBase : MonoBehaviour
         MinigameLoaded.Invoke();
     }
 
+    public virtual void UnloadMinigame()
+    {
+
+    }
+
     public virtual void PlayTutorial(System.Action callback)
     {
         tutorial.Begin(callback);
