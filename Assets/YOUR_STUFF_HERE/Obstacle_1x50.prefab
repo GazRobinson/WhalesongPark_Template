@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1604161869049186942}
   m_Layer: 0
   m_Name: Obstacle_1x50
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d014fa2db5461504cbfcf9b1d527c2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedReductionOnHit: 5
 --- !u!54 &3536010805432112903
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,7 +127,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 118
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!64 &2667670910942970602
 MeshCollider:

@@ -43,10 +43,12 @@ public class PlayerRig : MonoBehaviour
     }
     public float playerSpeed;
     [SerializeField] private float playerAcceleration;
+    [SerializeField] private float playerSlideSpeed = 5;
 
     // OBSTACLES
     //The distance obstacles will spawn from the player, in units, through local Z-axis.
     [SerializeField] private int ObstacleSpawnDistance = 30;
+    [SerializeField] private int landDistanceOffset = 25;
     GameObject obstacles;
     [SerializeField] private GameObject prefab1x1;
     [SerializeField] private GameObject prefabLand;
@@ -84,7 +86,7 @@ public class PlayerRig : MonoBehaviour
                 ProcessMovement(new Vector3(-1, 0, 0));
                 break;
             case inputTypes.Directional:
-
+                ProcessMovement(new Vector3(-direction.x, 0, 0));
                 break;
         }
 
@@ -92,7 +94,7 @@ public class PlayerRig : MonoBehaviour
 
     private void ProcessMovement(Vector3 direction)
     {
-        obstacles.transform.localPosition = obstacles.transform.localPosition + direction;
+        obstacles.transform.localPosition = obstacles.transform.localPosition + direction * Time.deltaTime * playerSlideSpeed * playerSpeed;
     }
 
     private void ProcessObjectSpawning()
@@ -118,14 +120,19 @@ public class PlayerRig : MonoBehaviour
     }
     private void SpawnSingleObject(Vector3 spawnPos)
     {
+        Collider[] overlaps = Physics.OverlapSphere(spawnPos, 0.1f, mask, QueryTriggerInteraction.UseGlobal);
+        foreach (Collider collision in overlaps)
+        {
+            if (collision.gameObject != null) return;
+        }
         Instantiate(prefab1x1, spawnPos, transform.rotation, obstacles.transform);
     }
     private void SpawnLand(Vector3 spawnPos)
     {
         timeSinceLastLand = 0;
         //Convert to local space and apply landmass offset
-        Vector3 leftPos = obstacles.transform.InverseTransformPoint(spawnPos) - new Vector3(-27.5f, 0, 0);
-        Vector3 rightPos = obstacles.transform.InverseTransformPoint(spawnPos) - new Vector3(27.5f, 0, 0);
+        Vector3 leftPos = obstacles.transform.InverseTransformPoint(spawnPos) - new Vector3(-27.5f, 0, -landDistanceOffset);
+        Vector3 rightPos = obstacles.transform.InverseTransformPoint(spawnPos) - new Vector3(27.5f, 0, -landDistanceOffset);
         //Convert back to world space
         leftPos = obstacles.transform.TransformPoint(leftPos);
         rightPos = obstacles.transform.TransformPoint(rightPos);
