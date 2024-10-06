@@ -3,8 +3,37 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+public enum PlayerStateEnum
+{
+    NOT_PLAYING,
+    IN_LOBBY,
+    QUEUED,
+    PLAYING,
+    FINISHED,
+}
+
+public enum ZonesEnum
+{
+    Britian,
+    North_Africa,
+    South_Africa,
+    Oceania,
+    Antartic,
+    Finished,
+}
+
+
 public class PlayerRig : MonoBehaviour
 {
+    public PlayerStateEnum _MyPlayerState;
+
+    public ZonesEnum Zone;
+
+    public int Score;
+
+    [SerializeField]
+    public int PlayerIndex;
+
     // PLAYER
     public enum inputTypes
     {
@@ -41,6 +70,11 @@ public class PlayerRig : MonoBehaviour
 
     public void HandleInput(inputTypes type, Vector2 direction = new Vector2())
     {
+        if (!gameObject.activeSelf)
+        {
+            return;
+        }
+
         switch (type)
         {
             case inputTypes.primaryFire:
@@ -99,4 +133,26 @@ public class PlayerRig : MonoBehaviour
         Instantiate(prefabLand, leftPos, transform.rotation, obstacles.transform);
         Instantiate(prefabLand, rightPos, transform.rotation, obstacles.transform);
     }
+
+    public void ResetPlayer()
+    {
+        Score = 0;
+        gameObject.SetActive(false);
+        _MyPlayerState = PlayerStateEnum.NOT_PLAYING;
+    }
+
+    public void FinalActivatePlayer(ZonesEnum StartZone)
+    {
+        Debug.Log("MINE: Activating player " + PlayerIndex);
+        gameObject.SetActive(true);
+        Zone = StartZone;
+        _MyPlayerState = PlayerStateEnum.PLAYING;
+    }
+
+    public void DeActivatePlayer()
+    {
+        gameObject.SetActive(false);
+        _MyPlayerState = PlayerStateEnum.FINISHED;
+    }
+
 }

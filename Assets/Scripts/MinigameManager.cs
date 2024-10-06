@@ -289,6 +289,12 @@ public class MinigameManager : MonoBehaviour
             GenerateNewMinigameQueue();
             minigameIndex = 0;
         }
+
+        if (currentMinigame != null)
+        {
+            currentMinigame.UnloadMinigame();
+        }
+
         currentMinigame = minigameQueue[minigameIndex];
         currentMinigame.LoadMiniGame();
 

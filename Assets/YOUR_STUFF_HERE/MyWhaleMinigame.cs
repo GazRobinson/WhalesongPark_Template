@@ -1,9 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using UnityEngine;
+
+public enum GameStateEnum
+{
+    NOT_PLAYING,
+    IN_LOBBY,
+    PLAYING,
+};
 
 public class MyWhaleMinigame : MinigameBase
 {
+    public GameStateEnum _GameState;
+
+    [SerializeField]
+    PlayerManager PlayerManagerRef;
+
+    [SerializeField]
+    GameManager GameManagerRef;
+
+    public List<PlayerRig> QueuedPlayers;
+
     [SerializeField] private PlayerRig[] players;
     /// <summary>
     /// This function is called at the end of the game so that it knows what to display on the score screen.
@@ -38,7 +56,7 @@ public class MyWhaleMinigame : MinigameBase
     {
         if (direction.magnitude != 0)
         {
-            ActivatePlayer(playerIndex);
+            //ActivatePlayer(playerIndex);
             players[playerIndex].HandleInput(PlayerRig.inputTypes.Directional, direction);
         }
     }
@@ -58,9 +76,11 @@ public class MyWhaleMinigame : MinigameBase
     /// <param name="playerIndex">Which player (0-3) pressed the button</param>
     public override void OnSecondaryFire(int playerIndex)
     {
-        ActivatePlayer(playerIndex);
+        //ActivatePlayer(playerIndex);
         players[playerIndex].HandleInput(PlayerRig.inputTypes.secondaryFire);
     }
+
+    
 
     public override void TimeUp()
     {
@@ -73,12 +93,136 @@ public class MyWhaleMinigame : MinigameBase
         //Is there any cleanup you have to do when the game gets totally reset?
         //This might just be empty!
 
+        _GameState = GameStateEnum.NOT_PLAYING;
+        QueuedPlayers.Clear();
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].ResetPlayer();
+        }
+    }
+
+    public override void LoadMiniGame()
+    {
+        base.LoadMiniGame();
+        //LOAD OUR START GUI HERE.
+        GameManagerRef.AlwaysPassInputToGame = true;
+        QueuedPlayers = new List<PlayerRig>();
+        OnResetGame();
+
+        Player[] Players = PlayerManagerRef.players;
+
+        for (int i = 0; i < Players.Length; i++)
+        {
+            if (Players[i].playerState == Player.PlayerState.ACTIVE)
+            {
+                ActivatePlayer(i);
+            }
+        }
+    }
+
+    public override void UnloadMinigame()
+    {
+        GameManagerRef.AlwaysPassInputToGame = false;
     }
 
     private void ActivatePlayer(int playerIndex)
     {
-        Debug.Log("Activating player " + playerIndex);
-        if (players[playerIndex].gameObject.activeSelf == false) 
-               players[playerIndex].gameObject.SetActive(true);
+        Debug.Log("MINE: Game State Was: " + _GameState);
+        Debug.Log("MINE: Player " + playerIndex + " Was in state: " + players[playerIndex]._MyPlayerState);
+
+        if (_GameState == GameStateEnum.NOT_PLAYING)
+        {
+            _GameState = GameStateEnum.IN_LOBBY;
+        }
+        else if (players[playerIndex]._MyPlayerState == PlayerStateEnum.IN_LOBBY)
+        {
+            _GameState = GameStateEnum.PLAYING;
+
+            for (int i = 0; i < players.Length;  i++)
+            {
+                if (players[i]._MyPlayerState == PlayerStateEnum.IN_LOBBY)
+                {
+                    players[i].FinalActivatePlayer(ZonesEnum.Britian);
+                }
+            }
+        }
+
+        Debug.Log("MINE: Game State Is Now: " + _GameState);
+
+        if (_GameState == GameStateEnum.IN_LOBBY)
+        {
+            players[playerIndex]._MyPlayerState = PlayerStateEnum.IN_LOBBY;
+            Debug.Log("MINE: Player: " + playerIndex + " is now waiting in the lobby!!");
+        }
+        else if (players[playerIndex]._MyPlayerState == PlayerStateEnum.NOT_PLAYING)
+        {
+            players[playerIndex]._MyPlayerState = PlayerStateEnum.QUEUED;
+            QueuedPlayers.Add(players[playerIndex]);
+
+            Debug.Log("MINE: Player: " + playerIndex + " is now queued to join at the next zone!!");
+        }
+    }
+
+
+    private void ReachedNewZone(PlayerRig PlayerWhoReached)
+    {
+        PlayerWhoReached.Zone = (ZonesEnum)(((int)PlayerWhoReached.Zone) + 1);
+
+        int HighestZone = -1;
+        int HighestPlayer = -1;
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            int PlayerZoneNum = (int)(players[i].Zone);
+
+            if (PlayerZoneNum > HighestZone)
+            {
+                HighestZone = PlayerZoneNum;
+                HighestPlayer = i;
+            }
+            else if (PlayerZoneNum == HighestZone && i == PlayerWhoReached.PlayerIndex)
+            {
+                HighestZone = PlayerZoneNum;
+                HighestPlayer = i;
+            }
+        }
+
+        if (PlayerWhoReached.Zone == ZonesEnum.Finished)
+        {
+            HighestZone = (int)ZonesEnum.Antartic;
+            PlayerWhoReached.DeActivatePlayer();
+
+            //ADD switching to the "Player is Finished" GUI here!!!
+        }
+
+        bool AllPlayersFinished = true;
+        
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].Zone != ZonesEnum.Finished)
+            {
+                AllPlayersFinished = false;
+                break;
+            }
+        }
+
+        if (AllPlayersFinished)
+        {
+            _GameState = GameStateEnum.NOT_PLAYING;
+
+            return;
+        }
+
+        if (HighestPlayer == PlayerWhoReached.PlayerIndex)
+        {
+            for (int i = 0; i < players.Length; i++)
+            {
+                if (players[i]._MyPlayerState == PlayerStateEnum.QUEUED)
+                {
+                    PlayerWhoReached.FinalActivatePlayer((ZonesEnum)HighestZone);
+                }
+            }
+        }
     }
 }
