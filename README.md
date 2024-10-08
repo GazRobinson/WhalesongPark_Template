@@ -1,4 +1,4 @@
-# Development History
+# Development History - Ver 1.0.2
 Hello!
 
 Whalesong Park is a playable installation that exists physically in the real world. It’s a unique control and display system that has the potential to inspire some really unique gameplay experiences.
@@ -57,7 +57,7 @@ The minigame must have, as a child, a tutorial object with a `TutorialController
 As long as the Minigame is a child of the “Minigames” object, and has a `MinigameBase` derived component attached, then it will be loaded into the cycle of minigames. The games are played from top to bottom.
 
 Look at the Simple Example Game to see a fully implemented game example. It makes pretty good use of some assorted functionality from across the project that you could use to enhance your game.
-# How To
+# How To Code
 ## Input
 By default, input is supplied to the Minigame baseclass through the virtual functions:
 - `OnPrimaryFire(int playerIndex);`
@@ -78,3 +78,21 @@ By default, input is supplied to the Minigame baseclass through the virtual func
 	- Play the sound `clip` at `volume` and `pitch` through Player `playerIndex`'s speaker.
 - `WhalesongAudio.PlayGlobalOneShot(AudioClip clip, float volume = 1.0f, float pitch = 1.0f)`
 	- Play the sound `clip` at `volume` and `pitch` for all player speakers.
+# Building Whalesong Park
+The Whalesong Park machine is a PC (yay) that needs certain files in certain places to work (boo) these files should be created on build (yay).
+To build Whalesong Park open the Build Settings in Unity (Ctrl + Shift + B or File -> Build Settings).
+Ensure that your game scene (**DevScene** by default) is included in the build and click **Build**.
+You'll be prompted to choose or create a build folder. It is ***highly*** recommended that you name this folder so that it is identifiable as **A)** A Whalesong Park game and **B)** Your particular version of the game.
+
+For example: **WhalesongPark_GazGame**
+
+When the game builds it will create a few files in the executable folder. You might not need them now, but you should know what they are for when they are referred to later on.
+- **Buttons.txt** is a text file used for configuring the button input on the Whalesong Machine and the Demo Machine. It is unlikely you will need to change this.
+- **RunBorderless.bat** will launch the game in a borderless window. You might want to use this when testing on your own machine.
+- **RunOnTVSetup.bat** will launch the game in a borderless window at the resolution required to work on the TV Demo station in Abertay.
+- **RunOnWhalesongSetup.bat** will launch the game in a borderless window at the resolution required to work on the actual Whalesong Machine.
+
+## Running WSP on the TV Demo Machine
+Within Abertay University's Kydd Building is a functional recreation of the Whalesong Park Machine using four TVs.
+On the machine's Desktop there is a folder called **Whalesong Builds** or similar.
+-TBC-
