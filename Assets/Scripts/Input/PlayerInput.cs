@@ -68,63 +68,63 @@ namespace WhaleInput {
         private InputState State;
         private InputState LastState;
 
-        public bool GetButtonDown(WhalesongInput.WhaleButton btn)
+        public bool GetButtonDown(WhaleButton btn)
         {
             switch (btn)
             {
-            case WhalesongInput.WhaleButton.Up:
+            case WhaleButton.Up:
                     return (State.Direction.y > 0 && Mathf.Approximately(LastState.Direction.y, 0.0f));
-                case WhalesongInput.WhaleButton.Down:
+                case WhaleButton.Down:
                     return (State.Direction.y < 0 && Mathf.Approximately(LastState.Direction.y, 0.0f));
-                case WhalesongInput.WhaleButton.Left:
+                case WhaleButton.Left:
                     return (State.Direction.x < 0 && Mathf.Approximately(LastState.Direction.x, 0.0f));
-                case WhalesongInput.WhaleButton.Right:
+                case WhaleButton.Right:
                     return (State.Direction.x > 0 && Mathf.Approximately(LastState.Direction.x, 0.0f));
                 
-                case WhalesongInput.WhaleButton.L_Button:
+                case WhaleButton.L_Button:
                     return (State.A && !LastState.A);
-                case WhalesongInput.WhaleButton.R_Button:
+                case WhaleButton.R_Button:
                     return (State.B && !LastState.B);
                 default:
                     return false;
             }
         }
-        public bool GetButtonUp(WhalesongInput.WhaleButton btn)
+        public bool GetButtonUp(WhaleButton btn)
         {
             switch (btn)
             {
-                case WhalesongInput.WhaleButton.Up:
+                case WhaleButton.Up:
                     return (LastState.Direction.y > 0 && Mathf.Approximately(State.Direction.y, 0.0f));
-                case WhalesongInput.WhaleButton.Down:
+                case WhaleButton.Down:
                     return (LastState.Direction.y < 0 && Mathf.Approximately(State.Direction.y, 0.0f));
-                case WhalesongInput.WhaleButton.Left:
+                case WhaleButton.Left:
                     return (LastState.Direction.x < 0 && Mathf.Approximately(State.Direction.x, 0.0f));
-                case WhalesongInput.WhaleButton.Right:
+                case WhaleButton.Right:
                     return (LastState.Direction.x > 0 && Mathf.Approximately(State.Direction.x, 0.0f));
 
-                case WhalesongInput.WhaleButton.L_Button:
+                case WhaleButton.L_Button:
                     return (LastState.A && !State.A);
-                case WhalesongInput.WhaleButton.R_Button:
+                case WhaleButton.R_Button:
                     return (LastState.B && !State.B);
                 default:
                     return false;
             }
         }
-        public bool GetButton(WhalesongInput.WhaleButton btn)
+        public bool GetButton(WhaleButton btn)
         {
             switch (btn) {
-            case WhalesongInput.WhaleButton.Up:
+            case WhaleButton.Up:
                 return State.Direction.y > 0;
-            case WhalesongInput.WhaleButton.Down:
+            case WhaleButton.Down:
                 return State.Direction.y < 0;
-            case WhalesongInput.WhaleButton.Left:
+            case WhaleButton.Left:
                 return State.Direction.x < 0;
-            case WhalesongInput.WhaleButton.Right:
+            case WhaleButton.Right:
                 return State.Direction.x > 0;
 
-            case WhalesongInput.WhaleButton.L_Button:
+            case WhaleButton.L_Button:
                 return State.A;
-            case WhalesongInput.WhaleButton.R_Button:
+            case WhaleButton.R_Button:
                 return State.B;
             default:
                 return false;

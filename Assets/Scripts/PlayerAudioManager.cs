@@ -2,6 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Wrapper class for ease of use
+public static class WhalesongAudio
+{
+    public static void PlayOneShot(int playerIndex, AudioClip clip, float volume = 1.0f, float pitch = 1.0f)
+    {
+        PlayerAudioManager.PlayOneShot(playerIndex, clip, volume, pitch);
+    }
+
+    public static void PlayGlobalOneShot(AudioClip clip, float volume = 1.0f, float pitch = 1.0f)
+    {
+        PlayerAudioManager.PlayGlobalOneShot(clip, volume, pitch);
+    }
+}
+
 public class PlayerAudioManager : MonoBehaviour
 {
     private static PlayerAudioManager instance;

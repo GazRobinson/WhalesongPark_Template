@@ -6,6 +6,15 @@ using WhaleInput;
 
 //Leaving this in for future maintainers
 //I think the input system for this should mirror Unity's static "Input." for ease of use
+public enum WhaleButton
+{
+    Up,
+    Down,
+    Left,
+    Right,
+    L_Button,
+    R_Button
+}
 
 public static class WhalesongInput
 {
@@ -17,16 +26,6 @@ public static class WhalesongInput
             inputManager = inMan;
         }
     }
-    public enum WhaleButton
-    {
-        Up,
-        Down,
-        Left,
-        Right,
-        L_Button,
-        R_Button
-    }
-
 
     public static bool GetButtonDown(int PlayerID, WhaleButton btn)
     {
@@ -80,15 +79,15 @@ namespace WhaleInput
         public System.Action<bool[]> OnPortsVerified;
         private bool m_Initialised = false;
 
-        public bool GetButtonDown(int player, WhalesongInput.WhaleButton button)
+        public bool GetButtonDown(int player, WhaleButton button)
         {
             return playerInput[player].GetButtonDown(button);
         }
-        public bool GetButtonUp(int player, WhalesongInput.WhaleButton button)
+        public bool GetButtonUp(int player, WhaleButton button)
         {
             return playerInput[player].GetButtonUp(button);
         }
-        public bool GetButton(int player, WhalesongInput.WhaleButton button)
+        public bool GetButton(int player, WhaleButton button)
         {
             return playerInput[player].GetButton(button);
         }
