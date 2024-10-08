@@ -59,7 +59,8 @@ Shader "Unlit/MainMatShader"
             {
                 float3 LightDir = float3(_LightDir.x,_LightDir.y,_LightDir.z);
 
-                float BW = 1.0f - (_LightMinus * ((dot(LightDir, i.worldNormal) + 2.0) / 2.0));
+                float TexBW = tex2D(_MainTex, i.uv).x;
+                float BW = TexBW - (_LightMinus * ((dot(LightDir, i.worldNormal) + 2.0) / 2.0));
 
                 // sample the texture
                 //float BW = tex2D(_MainTex, i.uv).x - (_LightMinus * ((dot(LightDir,i.worldNormal) + 2) / 2));
