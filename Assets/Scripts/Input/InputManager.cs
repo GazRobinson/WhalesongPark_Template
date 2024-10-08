@@ -2,6 +2,60 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using WhaleInput;
+
+//Leaving this in for future maintainers
+//I think the input system for this should mirror Unity's static "Input." for ease of use
+
+public static class WhalesongInput
+{
+    private static WhaleInput.InputManager inputManager;
+    public static void Initialise(WhaleInput.InputManager inMan)
+    {
+        if (inputManager == null)
+        {
+            inputManager = inMan;
+        }
+    }
+    public enum WhaleButton
+    {
+        Up,
+        Down,
+        Left,
+        Right,
+        L_Button,
+        R_Button
+    }
+
+
+    public static bool GetButtonDown(int PlayerID, WhaleButton btn)
+    {
+        if (PlayerID > 3)
+        {
+            Debug.LogError("PlayerID is " + PlayerID + ". It must be from 0-3.");
+            return false;
+        }
+        return inputManager.GetButtonDown(PlayerID, btn);
+    }
+    public static bool GetButtonUp(int PlayerID, WhaleButton btn)
+    {
+        if (PlayerID > 3)
+        {
+            Debug.LogError("PlayerID is " + PlayerID + ". It must be from 0-3.");
+            return false;
+        }
+        return inputManager.GetButtonUp(PlayerID, btn);
+    }
+    public static bool GetButton(int PlayerID, WhaleButton btn)
+    {
+        if (PlayerID > 3)
+        {
+            Debug.LogError("PlayerID is " + PlayerID + ". It must be from 0-3.");
+            return false;
+        }
+        return inputManager.GetButton(PlayerID, btn);
+    }
+}
 
 namespace WhaleInput
 {
@@ -25,8 +79,22 @@ namespace WhaleInput
 
         public System.Action<bool[]> OnPortsVerified;
 
+        public bool GetButtonDown(int player, WhalesongInput.WhaleButton button)
+        {
+            return playerInput[player].GetButtonDown(button);
+        }
+        public bool GetButtonUp(int player, WhalesongInput.WhaleButton button)
+        {
+            return playerInput[player].GetButtonUp(button);
+        }
+        public bool GetButton(int player, WhalesongInput.WhaleButton button)
+        {
+            return playerInput[player].GetButton(button);
+        }
+
         public void Initialise(InputActions actions, bool debug)
-        {            
+        {
+            WhalesongInput.Initialise(this);
             bool good = true;
             int[] btns = new int[24];
             string path = "";

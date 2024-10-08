@@ -68,6 +68,68 @@ namespace WhaleInput {
         private InputState State;
         private InputState LastState;
 
+        public bool GetButtonDown(WhalesongInput.WhaleButton btn)
+        {
+            switch (btn)
+            {
+            case WhalesongInput.WhaleButton.Up:
+                    return (State.Direction.y > 0 && Mathf.Approximately(LastState.Direction.y, 0.0f));
+                case WhalesongInput.WhaleButton.Down:
+                    return (State.Direction.y < 0 && Mathf.Approximately(LastState.Direction.y, 0.0f));
+                case WhalesongInput.WhaleButton.Left:
+                    return (State.Direction.x < 0 && Mathf.Approximately(LastState.Direction.x, 0.0f));
+                case WhalesongInput.WhaleButton.Right:
+                    return (State.Direction.x > 0 && Mathf.Approximately(LastState.Direction.x, 0.0f));
+                
+                case WhalesongInput.WhaleButton.L_Button:
+                    return (State.A && !LastState.A);
+                case WhalesongInput.WhaleButton.R_Button:
+                    return (State.B && !LastState.B);
+                default:
+                    return false;
+            }
+        }
+        public bool GetButtonUp(WhalesongInput.WhaleButton btn)
+        {
+            switch (btn)
+            {
+                case WhalesongInput.WhaleButton.Up:
+                    return (LastState.Direction.y > 0 && Mathf.Approximately(State.Direction.y, 0.0f));
+                case WhalesongInput.WhaleButton.Down:
+                    return (LastState.Direction.y < 0 && Mathf.Approximately(State.Direction.y, 0.0f));
+                case WhalesongInput.WhaleButton.Left:
+                    return (LastState.Direction.x < 0 && Mathf.Approximately(State.Direction.x, 0.0f));
+                case WhalesongInput.WhaleButton.Right:
+                    return (LastState.Direction.x > 0 && Mathf.Approximately(State.Direction.x, 0.0f));
+
+                case WhalesongInput.WhaleButton.L_Button:
+                    return (LastState.A && !State.A);
+                case WhalesongInput.WhaleButton.R_Button:
+                    return (LastState.B && !State.B);
+                default:
+                    return false;
+            }
+        }
+        public bool GetButton(WhalesongInput.WhaleButton btn)
+        {
+            switch (btn) {
+            case WhalesongInput.WhaleButton.Up:
+                return State.Direction.y > 0;
+            case WhalesongInput.WhaleButton.Down:
+                return State.Direction.y < 0;
+            case WhalesongInput.WhaleButton.Left:
+                return State.Direction.x < 0;
+            case WhalesongInput.WhaleButton.Right:
+                return State.Direction.x > 0;
+
+            case WhalesongInput.WhaleButton.L_Button:
+                return State.A;
+            case WhalesongInput.WhaleButton.R_Button:
+                return State.B;
+            default:
+                return false;
+            }
+        }
         public void Initialise(int[] btns)
         {
             COM.A       = btns[0];
@@ -101,6 +163,7 @@ namespace WhaleInput {
         // Update is called once per frame
         public void Update()
         {
+            LastState = State;
             //TODO: This could be nicer
             State.A = Input.GetKey(Keyboard.A) || 
                 Input.GetButton(Controller.A) || 
@@ -142,10 +205,9 @@ namespace WhaleInput {
                 (Input.GetKey(Keyboard.Up) ? 1 : 0) + (Input.GetKey(Keyboard.Down) ? -1 : 0)
                 + Input.GetAxis(Controller.Vertical) 
                + (GetCOMState(COM.Up) ? 1 : 0) + (GetCOMState(COM.Down) ? -1 : 0)).normalized;
-            
+            State.Direction = Dir;
             onDirectionInput(PlayerID, Dir);
 
-            LastState = State;
         }
         bool GetCOMState(int keyValue)
         {
