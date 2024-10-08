@@ -195,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BikeIdle_0: -8343248673360164683
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

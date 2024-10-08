@@ -195,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BikeRight_0: -5402770639083857606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

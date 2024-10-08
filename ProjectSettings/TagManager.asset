@@ -18,6 +18,7 @@ TagManager:
   - Cleanup
   - MissedTrigger
   - MinigameManager
+  - FinishLine
   layers:
   - Default
   - TransparentFX

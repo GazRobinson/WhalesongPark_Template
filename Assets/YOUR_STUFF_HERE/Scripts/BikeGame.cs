@@ -1,13 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BikeGame : MinigameBase
 {
-   
-    [SerializeField] private PlayerBike[] players;
-    [SerializeField] BoxCollider2D finishLineCollder;
 
+    [SerializeField] private PlayerBike[] players;
+    [SerializeField] Transform finishLine;
+    [Tooltip("How much score each player gets for 1st place, 2nd place and so on.")]
+    [SerializeField] int[] playerRacePositionScore = new int[4];
+
+
+    private void Awake()
+    {
+        MinigameLoaded.AddListener(InitialiseGame);
+    }
 
     /// <summary>
     /// This function is called at the end of the game so that it knows what to display on the score screen.
@@ -23,7 +32,10 @@ public class BikeGame : MinigameBase
         {
             if (PlayerUtilities.GetPlayerState(i) == Player.PlayerState.ACTIVE)
             {
-                gsd.PlayerScores[i] = 1;                        //Each player scored one point
+                var playerPositions = DeterminePlayerRacePositions();
+                //each player is scored on how far they were from the finish
+                gsd.PlayerScores[playerPositions[i]] = playerRacePositionScore[i];
+                
                 gsd.PlayerTimes[i] = gsd.PlayerScores[i] * 2;   //Each player gets two seconds per point scored
                 teamTime += gsd.PlayerTimes[i];                 //Keep a running total of the total time scored by all players
             }
@@ -40,7 +52,7 @@ public class BikeGame : MinigameBase
     /// <param name="direction">Which direction(s) are they pressing</param>
     public override void OnDirectionalInput(int playerIndex, Vector2 direction)
     {
-        
+
     }
     /// <summary>
     /// What should happen when the player presses the left hand button?
@@ -76,6 +88,32 @@ public class BikeGame : MinigameBase
     public void OnFinishReached()
     {
         OnGameComplete(true);
+    }
+
+    public void InitialiseGame()
+    {
+        //TODO: Reset players to start point
+    }
+    int[] DeterminePlayerRacePositions()
+    {
+        Dictionary<int, float> playerDistances = new Dictionary<int, float>();
+        int[] playerPositions = new int[4];
+
+        //get each player's distance from the finish line
+        for (int i = 0; i < 4; i++) {
+            playerDistances.Add(i,(finishLine.position.y - players[i].transform.position.y));
+        }
+        //create a list from the dictionary (TODO: could just make the dictionary a keyvalue list tbh)
+        var distanceAndPlayerID = new List<KeyValuePair<int, float>>(playerDistances);
+        //Sort the list based on distnace (shortest distance goes first, then second shortest etc.)
+        distanceAndPlayerID.Sort((a, b) => a.Value.CompareTo(b.Value));
+        
+        //get each playerID from the list now in order of how far they were from the finish
+        for (int i = 0; i < 4; i++){
+            playerPositions[i] = distanceAndPlayerID[i].Key;
+            print("Player " + (playerPositions[i] + 1) + " came in " + (i + 1) + "th place");
+        }
+        return playerPositions;
     }
 
 }
