@@ -27,12 +27,27 @@ namespace WhaleInput
 
         public void Initialise(InputActions actions, bool debug)
         {            
-            print(Application.dataPath);
             bool good = true;
             int[] btns = new int[24];
-            if (File.Exists(Application.dataPath + "/Buttons.txt"))
+            string path = "";
+#if !UNITY_EDITOR
+            path = Application.dataPath + "/../../Buttons.txt";
+#else
+            path = Application.dataPath + "/Buttons.txt";
+#endif
+            string truePath = "";
+            if (File.Exists(path))
             {
-                var sr = new StreamReader(Application.dataPath + "/Buttons.txt");
+                truePath = path;
+            }
+            else if (File.Exists(Application.dataPath + "/../Buttons.txt"))
+            {
+                truePath = Application.dataPath + "/../Buttons.txt";
+            }
+
+            if (File.Exists(truePath))
+            {
+                var sr = new StreamReader(truePath);
 
                 for (int i = 0; i < 24; i++)
                 {
@@ -60,11 +75,11 @@ namespace WhaleInput
             }
             if (good)
             {
-                Debug.Log("Inputs loaded successfully!");
+                Debug.Log("Inputs loaded successfully from " + truePath);
             }
             else
             {
-                Debug.Log("Inputs NOT loaded!");
+                Debug.LogWarning("Inputs NOT loaded from " + truePath);
             }
             for (int i = 0; i < playerInput.Length; i++)
             {
