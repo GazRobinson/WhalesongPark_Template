@@ -78,6 +78,7 @@ namespace WhaleInput
         private SingleComPortController Comtroller;
 
         public System.Action<bool[]> OnPortsVerified;
+        private bool m_Initialised = false;
 
         public bool GetButtonDown(int player, WhalesongInput.WhaleButton button)
         {
@@ -92,7 +93,23 @@ namespace WhaleInput
             return playerInput[player].GetButton(button);
         }
 
-        public void Initialise(InputActions actions, bool debug)
+        private void Awake()
+        {
+            if (!m_Initialised)
+            {
+                Initialise(false);
+            }
+        }
+
+        public void InitialiseActions(InputActions actions)
+        {
+            for (int i = 0; i < playerInput.Length; i++)
+            {
+                playerInput[i].SetListeners(actions, i);
+            }
+        }
+
+        public void Initialise( bool debug)
         {
             WhalesongInput.Initialise(this);
             bool good = true;
@@ -166,18 +183,22 @@ namespace WhaleInput
             for (int i = 0; i < playerInput.Length; i++)
             {
                 playerInput[i].SetComtroller(ref Comtroller);
-                playerInput[i].SetListeners(actions, i);
             }
             //TODO: Do this properly!
 
             bool[] playerPortsVerified = new bool[4] {true, true, true, true};
-            OnPortsVerified(playerPortsVerified);
+            if (OnPortsVerified != null)
+            {
+                OnPortsVerified(playerPortsVerified);
+            }
 
             if (debug)
             {
                 InputDebugger ID = Instantiate<InputDebugger>(Resources.Load<InputDebugger>("InputDebugger"));
                 ID.comtroller = Comtroller;
             }
+
+            m_Initialised = true;
         }
 
         private void Update()

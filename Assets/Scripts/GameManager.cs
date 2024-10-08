@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
         {
             inputManager = Instantiate<WhaleInput.InputManager>(Resources.Load<WhaleInput.InputManager>("Input Manager"));
         }
-        inputManager.OnPortsVerified += VerifyPorts;
+        inputManager.OnPortsVerified += HandlePortVerification;
 
 
         buttonASuccessiveInputs = new int[4];
@@ -163,7 +163,8 @@ public class GameManager : MonoBehaviour
         string[] cmdArgs = System.Environment.GetCommandLineArgs();
         bool InputDebugMode = ArgExists(ref cmdArgs, "-INPUTDEBUG");
 
-        inputManager.Initialise(new WhaleInput.InputActions
+        inputManager.Initialise(InputDebugMode);
+        inputManager.InitialiseActions(new WhaleInput.InputActions
         {
             APressed = OnPrimaryFire,
             ADown = OnPrimaryHold,
@@ -174,7 +175,7 @@ public class GameManager : MonoBehaviour
             BReleased = OnSecondaryReleased,
 
             DirectionInput = OnDirectionalInput
-        }, InputDebugMode);
+        });
 
         ChangeGameState(GameState.IDLE);
     }
@@ -443,7 +444,8 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void VerifyPorts(bool[] playerPortsFound) 
+    //TODO: Move this into the input manager
+    public void HandlePortVerification(bool[] playerPortsFound) 
     {
         for (int i = 0; i < 4; i++) 
         {

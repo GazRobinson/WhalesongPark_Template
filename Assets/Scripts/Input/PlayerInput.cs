@@ -170,15 +170,15 @@ namespace WhaleInput {
                 GetCOMState(COM.A);
             if(State.A && !LastState.A)
             {
-                onButtonAPressedEvents(PlayerID);
+                onButtonAPressedEvents?.Invoke(PlayerID);
             } 
             else if(!State.A && LastState.A)
             {
-                onButtonAReleasedEvents(PlayerID);
+                onButtonAReleasedEvents?.Invoke(PlayerID);
             }
             else if (State.A && LastState.A)
             {
-                onButtonADownEvents(PlayerID);
+                onButtonADownEvents?.Invoke(PlayerID);
             }
 
             State.B = Input.GetKey(Keyboard.B) || 
@@ -186,15 +186,15 @@ namespace WhaleInput {
                 GetCOMState(COM.B);
             if (State.B && !LastState.B)
             {
-                onButtonBPressedEvents(PlayerID);
+                onButtonBPressedEvents?.Invoke(PlayerID);
             }
             else if (!State.B && LastState.B)
             {
-                onButtonBReleasedEvents(PlayerID);
+                onButtonBReleasedEvents?.Invoke(PlayerID);
             }
             else if (State.B && LastState.B)
             {
-                onButtonBDownEvents(PlayerID);
+                onButtonBDownEvents?.Invoke(PlayerID);
             }
 
 
@@ -206,8 +206,10 @@ namespace WhaleInput {
                 + Input.GetAxis(Controller.Vertical) 
                + (GetCOMState(COM.Up) ? 1 : 0) + (GetCOMState(COM.Down) ? -1 : 0)).normalized;
             State.Direction = Dir;
-            onDirectionInput(PlayerID, Dir);
-
+            if (onDirectionInput != null)
+            {
+                onDirectionInput(PlayerID, Dir);
+            }
         }
         bool GetCOMState(int keyValue)
         {
