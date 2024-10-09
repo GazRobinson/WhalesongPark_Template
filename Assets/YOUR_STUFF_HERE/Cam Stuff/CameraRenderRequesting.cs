@@ -68,16 +68,18 @@ public class CameraRenderRequesting : MonoBehaviour
             return;
         }
 
-        // Start the asynchronous coroutine
-        StartCoroutine(RenderSingleRequestNextFrame());
-
         // Call a method called OnEndContextRendering when a camera finishes rendering
         RenderPipelineManager.endContextRendering += OnEndContextRendering;
         RenderPipelineManager.endCameraRendering += OnCamEndRendering;
+
+        // Start the asynchronous coroutine
+        StartCoroutine(RenderSingleRequestNextFrame());
     }
 
     void OnCamEndRendering(ScriptableRenderContext context, Camera CCam)
     {
+        //Debug.Log("Cam that finished!", CCam);
+
         if (CamToId.TryGetValue(CCam, out int i))
         {
             Graphics.Blit(renderTextures[i], PostProcessTextures[i], PostProcessMats[i]);
@@ -141,10 +143,10 @@ public class CameraRenderRequesting : MonoBehaviour
 
                 // Render the camera output to the RenderTexture synchronously
                 RenderPipeline.SubmitRenderRequest(cameras[i], request);
-
-                // At this point, the RenderTexture in renderTextures[i] contains the scene rendered from the point
-                // of view of the Camera in cameras[i]
-                //Graphics.Blit(renderTextures[i], PostProcessTextures[i], PostProcessMats[i]);
+            }
+            else
+            {
+                //Debug.Log("Does not support render request!!");
             }
         }
     }
