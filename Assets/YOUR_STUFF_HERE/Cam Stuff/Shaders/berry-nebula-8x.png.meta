@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      berry-nebula-8x_0: 7899961752560621138
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
