@@ -56,7 +56,8 @@ public class PlayerRig : MonoBehaviour
     float timeSinceLastLand = 0f;
     [SerializeField] private float spawnRate;
     public LayerMask mask;
-
+    // SCORE
+    public float playerScore = 0;
     void Start()
     {
         obstacles = transform.Find("Obstacles").gameObject;
@@ -68,6 +69,10 @@ public class PlayerRig : MonoBehaviour
         playerSpeed += playerAcceleration * Time.deltaTime;
         playerSpeed = Mathf.Clamp(playerSpeed, 5, Mathf.Infinity);
         ProcessObjectSpawning();
+    }
+    private void FixedUpdate()
+    {
+        UpdateScore(Time.fixedDeltaTime * playerSpeed);
     }
 
     public void HandleInput(inputTypes type, Vector2 direction = new Vector2())
@@ -109,7 +114,7 @@ public class PlayerRig : MonoBehaviour
 
             if (timeSinceLastLand >= 20/spawnRate / playerSpeed)
             {
-                SpawnLand(spawnPos);
+                //SpawnLand(spawnPos);
             }
             else SpawnSingleObject(spawnPos);
 
@@ -162,4 +167,18 @@ public class PlayerRig : MonoBehaviour
         _MyPlayerState = PlayerStateEnum.FINISHED;
     }
 
+    public void UpdateScore(float scoreAmount)
+    {
+        playerScore += scoreAmount;
+        Debug.Log("Current Score: " + playerScore);
+    }
+
+    public void AdjustSpeed(float adjustAmount)
+    {
+        playerSpeed += adjustAmount;
+        if (adjustAmount < 0)
+        {
+            UpdateScore(adjustAmount * 2);
+        }
+    }
 }

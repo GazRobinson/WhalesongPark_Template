@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4023966715727525983}
   - component: {fileID: 2562843662472962245}
   m_Layer: 3
-  m_Name: LandLeft
+  m_Name: LandRight
   m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 6587070041204471209}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25.19}
+  m_LocalPosition: {x: -0.44, y: 0, z: 30.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -262,7 +262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1994.1536
+      value: 3192.1143
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       propertyPath: m_LocalScale.y
@@ -274,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -282,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.18
+      value: 14.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -312,6 +312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3861478300804232965, guid: 490fc38e09f9dfe41936bb9b33aa7d29, type: 3}
     - target: {fileID: 919132149155446097, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       propertyPath: m_Name
       value: englishChannelLeftside
@@ -320,17 +324,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
-      propertyPath: m_TagString
-      value: Land
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9164864014870389968}
+      addedObject: {fileID: 3593680975989041340}
   m_SourcePrefab: {fileID: 100100000, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
 --- !u!4 &107597858793154555 stripped
 Transform:
@@ -342,7 +342,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
   m_PrefabInstance: {fileID: 501301246066950160}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &9164864014870389968
+--- !u!64 &3593680975989041340
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,4 +363,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 3369316746193770658, guid: 49fa9000cd5ce5f49ab3603bc20260b7, type: 3}
+  m_Mesh: {fileID: 3861478300804232965, guid: 490fc38e09f9dfe41936bb9b33aa7d29, type: 3}
