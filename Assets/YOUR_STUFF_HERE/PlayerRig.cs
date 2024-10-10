@@ -170,7 +170,7 @@ public class PlayerRig : MonoBehaviour
     public void UpdateScore(float scoreAmount)
     {
         playerScore += scoreAmount;
-        Debug.Log("Current Score: " + playerScore);
+        //Debug.Log("Current Score: " + playerScore);
     }
 
     public void AdjustSpeed(float adjustAmount)

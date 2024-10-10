@@ -33,7 +33,7 @@ public class LandGenerator : MonoBehaviour
     void Update()
     {
         dynamicPosition = topChecker.transform.position;
-        while (isGeneratingLand && CheckPosition()) GenerateNextLand();
+        if (isGeneratingLand && CheckPosition()) GenerateNextLand();
         CheckForDestroy();
         if (positionsDistance == 0) positionsDistance = Vector3.Distance(staticPosition, dynamicPosition);
     }
@@ -72,7 +72,7 @@ public class LandGenerator : MonoBehaviour
         sphereLocation = nextStaticPosition;
         foreach (Collider collision in collisions)
         {
-            if (collision.tag == "Land") return false;
+            if (collision.tag == "Land" && collision.transform.parent != gameObject.transform) return false;
         }
         return true;
     }
