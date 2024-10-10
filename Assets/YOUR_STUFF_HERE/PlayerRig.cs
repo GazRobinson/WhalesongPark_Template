@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum PlayerStateEnum
 {
@@ -22,6 +24,15 @@ public enum ZonesEnum
     Finished,
 }
 
+public enum TutorialsEnum
+{
+    None = 0,
+    RaiseSails = 1,
+    LowerSails = 2,
+    Left_Right = 4,
+    Dolphin = 8,
+}
+
 
 public class PlayerRig : MonoBehaviour
 {
@@ -33,6 +44,42 @@ public class PlayerRig : MonoBehaviour
 
     [SerializeField]
     public int PlayerIndex;
+
+    TutorialsEnum TutorialsDoneFlag;
+    TutorialsEnum CurrentTutorial;
+
+    bool EventTimerActive;
+
+    float EventTimer;
+
+    int TimedEventIndex = 0;
+
+    float[] EventTimes = new float[]
+    {
+        3.5f,
+        3.5f,
+        3.5f,
+        3.5f,
+    };
+
+    Action[] TimedEvents;
+
+    void RaiseSailsTut() { StartTutorial(TutorialsEnum.RaiseSails); }
+    void LowerSailsTut() { StartTutorial(TutorialsEnum.LowerSails); }
+    void LeftRightTut() { StartTutorial(TutorialsEnum.Left_Right); }
+    void StartObstacleSpawn() { StartTutorial(TutorialsEnum.Left_Right); }
+    void StartDolphinSpawn() {  }
+
+    [SerializeField]
+    Image[] TutorialImages;
+
+    static Dictionary<TutorialsEnum, int> FlagToIndex = new Dictionary<TutorialsEnum, int>()
+    {
+        { TutorialsEnum.RaiseSails, 1},
+        { TutorialsEnum.LowerSails, 2},
+        { TutorialsEnum.Left_Right, 3},
+        { TutorialsEnum.Dolphin, 4},
+    };
 
     // PLAYER
     public enum inputTypes
@@ -61,11 +108,30 @@ public class PlayerRig : MonoBehaviour
     void Start()
     {
         obstacles = transform.Find("Obstacles").gameObject;
+
+        TimedEvents = new Action[]
+        {
+            RaiseSailsTut,
+            LowerSailsTut,
+            LeftRightTut,
+            StartObstacleSpawn,
+            StartDolphinSpawn,
+        };
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (EventTimerActive)
+        {
+            EventTimer -= Time.deltaTime;
+
+            if (EventTimer < 0.0f)
+            {
+                TimedEventTimeOut();
+            }
+        }
+
         playerSpeed += playerAcceleration * Time.deltaTime;
         playerSpeed = Mathf.Clamp(playerSpeed, 5, Mathf.Infinity);
         ProcessObjectSpawning();
@@ -107,7 +173,7 @@ public class PlayerRig : MonoBehaviour
         if (timeSinceLastSpawn >= 1/spawnRate / playerSpeed)
         {
             //generate random offset
-            int offset = Random.Range(-15, 15);
+            int offset = UnityEngine.Random.Range(-15, 15);
             offset *= 2;
             //get base position
             Vector3 spawnPos = transform.TransformPoint(new Vector3(offset, 0, ObstacleSpawnDistance));
@@ -148,9 +214,27 @@ public class PlayerRig : MonoBehaviour
 
     public void ResetPlayer()
     {
-        Score = 0;
+        EventTimerActive = false;
         gameObject.SetActive(false);
         _MyPlayerState = PlayerStateEnum.NOT_PLAYING;
+    }
+
+    public void FinishedTutorial(TutorialsEnum TutorialFinished)
+    {
+        if (!TutorialsDoneFlag.HasFlag(TutorialFinished))
+        {
+            TutorialImages[FlagToIndex[TutorialFinished]].gameObject.SetActive(true);
+        }
+
+        TutorialsDoneFlag = TutorialsDoneFlag | TutorialFinished;
+    }
+
+    public void StartTutorial(TutorialsEnum NewTutorial)
+    {
+        FinishedTutorial(CurrentTutorial);
+
+        TutorialImages[FlagToIndex[NewTutorial]].gameObject.SetActive(true);
+        CurrentTutorial = NewTutorial;
     }
 
     public void FinalActivatePlayer(ZonesEnum StartZone)
@@ -159,6 +243,13 @@ public class PlayerRig : MonoBehaviour
         gameObject.SetActive(true);
         Zone = StartZone;
         _MyPlayerState = PlayerStateEnum.PLAYING;
+        CurrentTutorial = TutorialsEnum.None;
+        TutorialsDoneFlag = TutorialsEnum.None;
+        Score = 0;
+        EventTimerActive = true;
+        TimedEventIndex = -1;
+
+        TimedEventTimeOut();
     }
 
     public void DeActivatePlayer()
@@ -181,4 +272,18 @@ public class PlayerRig : MonoBehaviour
             UpdateScore(adjustAmount * 2);
         }
     }
+    public void TimedEventTimeOut()
+    {
+        TimedEventIndex++;
+
+        if (TimedEventIndex < TimedEvents.Length)
+        {
+            TimedEvents[TimedEventIndex]();
+            EventTimer = EventTimes[TimedEventIndex];
+        }
+        else
+        {
+            EventTimerActive = false;
+        }
+    }    
 }

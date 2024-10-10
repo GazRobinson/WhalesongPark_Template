@@ -38,7 +38,7 @@ public class AutoRenderTextureMaker : MonoBehaviour
 
         CamRef.targetTexture = CamRenderTex;
 
-        Debug.Log("Adding Cam! " + RenderRequestRef == null);
+        Debug.Log("Adding Cam! " + (RenderRequestRef == null).ToString());
         RenderRequestRef.AddCam(CamRef,CamRenderTex,PostProcessTex, AscRawImage, PostProcessMat);
 
         //CamRef.targetTexture = CamRenderTex;

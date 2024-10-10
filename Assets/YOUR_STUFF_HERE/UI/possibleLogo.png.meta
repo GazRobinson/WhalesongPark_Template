@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: e4b4505a43cd39b4a8845dfdeb24cf69
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1837802126601155974
+    second: possibleLogo_0
+  - first:
+      213: -812581914061494776
+    second: possibleLogo_1
+  - first:
+      213: 1873503683296096158
+    second: possibleLogo_2
+  - first:
+      213: 2151927171288905724
+    second: possibleLogo_3
+  - first:
+      213: 3258488345647714815
+    second: possibleLogo_4
+  - first:
+      213: -7767223106958156769
+    second: possibleLogo_5
+  - first:
+      213: -2111336087785446526
+    second: possibleLogo_6
+  - first:
+      213: 4726523410183565487
+    second: possibleLogo_7
+  - first:
+      213: 4761487404284362099
+    second: possibleLogo_8
+  - first:
+      213: 4740218159096401493
+    second: possibleLogo_9
+  - first:
+      213: -491319441780372215
+    second: possibleLogo_10
+  - first:
+      213: -4150363945949759919
+    second: possibleLogo_11
+  - first:
+      213: -4727249731293714023
+    second: possibleLogo_12
+  - first:
+      213: -3008381416994785966
+    second: possibleLogo_13
+  - first:
+      213: -2245277328356513920
+    second: possibleLogo_14
+  - first:
+      213: -1683453046031185318
+    second: possibleLogo_15
+  - first:
+      213: 6648886523400775815
+    second: possibleLogo_16
+  - first:
+      213: -4223024724571456113
+    second: possibleLogo_17
+  - first:
+      213: 1075640005096154890
+    second: possibleLogo_18
+  - first:
+      213: -5553592087239816288
+    second: possibleLogo_19
+  - first:
+      213: 4489346873040406032
+    second: possibleLogo_20
+  - first:
+      213: -8755189351529944417
+    second: possibleLogo_21
+  - first:
+      213: 8164784832731618271
+    second: possibleLogo_22
+  - first:
+      213: -412034756412672080
+    second: possibleLogo_23
+  - first:
+      213: 4934872721951563460
+    second: possibleLogo_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: possibleLogo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 288
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685f48b0c4f218910800000000000000
+      internalID: 1837802126601155974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_1
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 431
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806257ded0129b4f0800000000000000
+      internalID: -812581914061494776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 145
+        width: 117
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fef387ca5000a10800000000000000
+      internalID: 1873503683296096158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 145
+        width: 203
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7bf236c5e2ddd10800000000000000
+      internalID: 2151927171288905724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_4
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 145
+        width: 174
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff1151bd2e9783d20800000000000000
+      internalID: 3258488345647714815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_5
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 145
+        width: 232
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c9d8a9cb7453490800000000000000
+      internalID: -7767223106958156769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_6
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 145
+        width: 260
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283e516b30703b2e0800000000000000
+      internalID: -2111336087785446526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_7
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 145
+        width: 203
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa03f86dffbf79140800000000000000
+      internalID: 4726523410183565487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_8
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 145
+        width: 203
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37dbdd61193341240800000000000000
+      internalID: 4761487404284362099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_9
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 59
+        width: 260
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e0cca0d43a8c140800000000000000
+      internalID: 4740218159096401493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_10
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 16
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d0071229b7e29f0800000000000000
+      internalID: -491319441780372215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_11
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 16
+        width: 34
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15673111bf1f666c0800000000000000
+      internalID: -4150363945949759919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_12
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 16
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9996da95a6f656eb0800000000000000
+      internalID: -4727249731293714023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_13
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 16
+        width: 43
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255b3235a051046d0800000000000000
+      internalID: -3008381416994785966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_14
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 16
+        width: 43
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08762157a2c27d0e0800000000000000
+      internalID: -2245277328356513920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_15
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 16
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a034bbf5c23a8e0800000000000000
+      internalID: -1683453046031185318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_16
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 16
+        width: 34
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7886f23d017954c50800000000000000
+      internalID: 6648886523400775815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_17
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 16
+        width: 35
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8df936336dc465c0800000000000000
+      internalID: -4223024724571456113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_18
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 16
+        width: 27
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07a4f9b2e07dee00800000000000000
+      internalID: 1075640005096154890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_19
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 16
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab86acbb6dade2b0800000000000000
+      internalID: -5553592087239816288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_20
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 16
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0168519023d5d4e30800000000000000
+      internalID: 4489346873040406032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_21
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 16
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a66c8fba15f7680800000000000000
+      internalID: -8755189351529944417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_22
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 16
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb1776eb842f4170800000000000000
+      internalID: 8164784832731618271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_23
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 16
+        width: 34
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b778e47298284af0800000000000000
+      internalID: -412034756412672080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: possibleLogo_24
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 16
+        width: 42
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce10b338903c7440800000000000000
+      internalID: 4934872721951563460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
